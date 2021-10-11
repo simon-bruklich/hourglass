@@ -16,27 +16,27 @@ import {
   useMutation,
 } from 'relay-hooks';
 import { FaLock, FaBan } from 'react-icons/fa';
-import { useDebouncedCallback } from 'use-debounce/lib';
-import Loading from '@hourglass/common/loading';
-import { ExamContext } from '@hourglass/common/context';
-import { MutationReturn } from '@hourglass/common/helpers';
-import { AlertContext } from '@hourglass/common/alerts';
+import { useDebouncedCallback } from 'use-debounce';
+import Loading from '@hourglass/../../packs/components/common/loading';
+import { ExamContext } from '@hourglass/../../packs/components/common/context';
+import { MutationReturn } from '@hourglass/../../packs/components/common/helpers';
+import { AlertContext } from '@hourglass/../../packs/components/common/alerts';
 import {
   MarkDescription,
   CodeState,
   CodeInfo,
   HTMLVal,
   CodeInitial,
-} from '@student/exams/show/types';
+} from '@hourglass/../../packs/components/workflows/student/exams/show/types';
 import {
   Editor,
   applyMarks,
   marksToDescs,
   removeMarks,
-} from '@student/exams/show/components/ExamCodeBox';
-import { firstFile } from '@student/exams/show/files';
-import Prompted from '@professor/exams/new/editor/body-items/Prompted';
-import { FilePickerSelectWithPreview } from '@professor/exams/new/editor/components/FilePicker';
+} from '@hourglass/../../packs/components/workflows/student/exams/show/components/ExamCodeBox';
+import { firstFile } from '@hourglass/../../packs/components/workflows/student/exams/show/files';
+import Prompted from '@hourglass/../../packs/components/workflows/professor/exams/new/editor/body-items/Prompted';
+import { FilePickerSelectWithPreview } from '@hourglass/../../packs/components/workflows/professor/exams/new/editor/components/FilePicker';
 import { CodeCreateMutation } from './__generated__/CodeCreateMutation.graphql';
 import { CodeChangeMutation } from './__generated__/CodeChangeMutation.graphql';
 
